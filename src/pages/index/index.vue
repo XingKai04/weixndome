@@ -1,6 +1,8 @@
 <template>
   <div @click="clickHandle">
-    <view>
+    <view> 
+      <!-- 搜索框 -->
+    <search/>
       <!-- 伦播图 -->
       <swiper indicator-dots autoplay interval="3000 " circular>
         <swiper-item>
@@ -20,7 +22,7 @@
         </swiper-item>
       </swiper>
     </view>
-    <search/>
+ 
 
   </div>
 </template>
