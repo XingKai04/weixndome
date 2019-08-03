@@ -1,5 +1,5 @@
 <template>
-    <div class="search">
+    <div class="search focused" >
         <view class="search-box" > 
             <input type="text">
             <span></span>
@@ -40,11 +40,8 @@ export default {
     width: 96rpx;
     height: 50rpx;
     transform: translate(-50%,-50%);
-
     left: 50%;
     top: 50%;
-
-
 }
 input {
 }
