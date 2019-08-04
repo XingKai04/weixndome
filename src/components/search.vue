@@ -1,8 +1,8 @@
 <template>
-    <div class="search focused" >
+    <div class="search " :class="{focused:focused}" >
         <view class="search-box" > 
-            <input type="text">
-            <span></span>
+            <input @focus="gosearch" type="text" :placeholder="placeholder">
+            <!-- <span v-show="span"></span> -->
         </view>
         <div class="">
         <div href="" class="cancle">取消</div>
@@ -14,14 +14,27 @@
 export default {
     data () {
 
-        return{
-
+     return{
+         focused:false,
+         placeholder:'',
+         span:true
+        }
+    },
+    methods:{
+        gosearch () {
+            console.log('点击测试,输入框变色 ');
+            this.focused=true;
+            this.placeholder='输入你要的商品';
+            this.span=false;
         }
     }
 }
 </script>
 
 <style>
+.span {
+    display: none;
+} 
 .search {
     display: flex;
     padding: 20rpx;
@@ -34,7 +47,7 @@ export default {
     background-color: aliceblue;
     border-radius: 8rpx;
     position: relative;
-    /* flex: 1; */
+    flex: 1;
     
 }
 .search-box::after {
