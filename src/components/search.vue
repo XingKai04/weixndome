@@ -4,8 +4,8 @@
             <input @focus="gosearch" type="text" :placeholder="placeholder">
             <!-- <span v-show="span"></span> -->
         </view>
-        <div class="">
-        <div href="" class="cancle">取消</div>
+        <div class="" >
+        <div href=""  :class="{dis:dis}" @click="qx" >取消</div>
         </div>
     </div>
 </template>
@@ -17,7 +17,7 @@ export default {
      return{
          focused:false,
          placeholder:'',
-         span:true
+         dis:'false'
         }
     },
     methods:{
@@ -25,16 +25,22 @@ export default {
             console.log('点击测试,输入框变色 ');
             this.focused=true;
             this.placeholder='输入你要的商品';
-            this.span=false;
+            this.dis=false;
+        },
+        qx () {
+            console.log('111');
+            this.focused=false;
+            this.placeholder='';
+            this.dis=true;
         }
     }
 }
 </script>
 
 <style>
-.span {
+.dis {
     display: none;
-} 
+}
 .search {
     display: flex;
     padding: 20rpx;
@@ -63,10 +69,6 @@ export default {
 .search.focused {
 background-color: #ccc;
 }
-.cancle {
 
-display: none;
-width: 150rpx;
-}
 
 </style>
