@@ -7,6 +7,10 @@
         <div class="" >
         <div href=""  :class="{dis:dis}" @click="qx" >取消</div>
         </div>
+        <!-- 搜素遮罩层 -->
+        <div class="result">
+
+        </div>
     </div>
 </template>
 
@@ -67,7 +71,19 @@ export default {
     top: 50%;
 }
 .search.focused {
-background-color: #ccc;
+    position: absolute;
+    width: 100%;
+    height:100% ;
+    background-color: #ccc;
+    z-index: 999;
+}
+.result {
+    position: absolute;
+    top: 100rpx;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
 }
 
 
