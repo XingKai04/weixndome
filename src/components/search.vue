@@ -4,7 +4,7 @@
             <input type="text">
             <span></span>
         </view>
-        <!-- <a href="">取消</a> -->
+        <a href="" class="cancle">取消</a>
     </div>
 </template>
 
@@ -43,6 +43,11 @@ export default {
     left: 50%;
     top: 50%;
 }
-input {
+.search.focused {
+background-color: #ccc;
 }
+.cancle {
+display: block;
+}
+
 </style>
